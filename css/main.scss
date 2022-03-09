@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+.mobile-navbar{
+  display: none;
+}
+
 .navbar{
   padding: 25px 30px;
   position: fixed;
@@ -119,11 +123,11 @@ h1, h2, h3, h4, h5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  transition: ease 1s transform;
+  // transition: ease 1s transform;
 
-  .animate-mission{
-    transform: translateX(0);
-  }
+  // .animate-mission{
+  //   transform: translateX(0);
+  // }
 
   &__text{
     grid-column: 1/2;
@@ -172,7 +176,7 @@ h1, h2, h3, h4, h5 {
   transition: ease .3s;
   position: relative;
 
-  box-shadow: $orange 0px 0px 10px;
+  // box-shadow: $orange 0px 0px 10px;
   // &:hover{
   // }
   
@@ -225,7 +229,8 @@ h1, h2, h3, h4, h5 {
     // grid-template-rows: 150px auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     background: rgba(0,0,0, .25);
-    padding: 200px;
+    // padding: 200px;
+    padding: 8vw;
     grid-gap: 40px;
 
     h2{
@@ -243,7 +248,7 @@ h1, h2, h3, h4, h5 {
 .event{
   background: rgba(0,0,0, .6);
   display: grid;
-  grid-template-columns: 1fr 60px 1fr;
+  grid-template-columns: 1fr 1fr;
   row-gap: 10px;
   padding: 30px;
   border-radius: 12px;
@@ -255,9 +260,10 @@ h1, h2, h3, h4, h5 {
 
   &__title{
     font-size: 2rem;
-    grid-column: 1/-1;
+    grid-column: 1/3;
     grid-row: 1/2;
     text-align: center;
+    justify-self: center;
   }
 
   &__subtext{
@@ -271,7 +277,7 @@ h1, h2, h3, h4, h5 {
 
   &__date{
     grid-row: 2/3;
-    grid-column: 3/4;
+    grid-column: 2/3;
     text-align: right;
   }
 
@@ -295,15 +301,17 @@ h1, h2, h3, h4, h5 {
 
   &__regBtn{
     grid-row: 5/6;
-    grid-column: 3/4;
+    grid-column: 2/3;
     font-size: 1.3rem;
     text-align: center;
     color: $text-color;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 8px 20px;
     border: solid $orange 2px;
     border-radius: 12px;
     height: fit-content;
+    width: fit-content;
+    justify-self: right;
     &:visited{color: $text-color}
     &:hover{
       color: $text-color;
@@ -335,3 +343,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
   }
 }
+
+
+// small screen styling
+@import "./small";
