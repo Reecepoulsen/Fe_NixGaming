@@ -35,8 +35,9 @@
   }
 
   .intro{
+    overflow: hidden;
     position: relative;
-    height: 90vh;
+    height: 190vw;
     &-backgroundVid{
       width: 100vw;
       height: 100%;

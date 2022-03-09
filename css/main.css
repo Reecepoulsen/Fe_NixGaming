@@ -476,8 +476,9 @@ h1, h2, h3, h4, h5 {
     padding: 0;
   }
   .intro {
+    overflow: hidden;
     position: relative;
-    height: 90vh;
+    height: 190vw;
   }
   .intro-backgroundVid {
     width: 100vw;
