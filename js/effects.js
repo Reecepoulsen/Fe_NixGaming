@@ -16,10 +16,11 @@ const missionText = document.getElementById("mission-text");
 const mission_transition_point = missionText.offsetTop;
 
 const transitionMission = () => {
-  if (window.scrollY > mission_transition_point) {
-    navbar.classList.add("animate-mission")
+  if (window.scrollY > mission_transition_point - 400 
+      && window.scrollY < mission_transition_point+ 600) {
+    missionText.classList.add("animate-mission")
   } else {
-    navbar.classList.remove("animate-mission")
+    missionText.classList.remove("animate-mission")
   }
 }
 

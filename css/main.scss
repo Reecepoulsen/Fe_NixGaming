@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5 {
       text-align:right;
       justify-self: right;
       text-shadow: -5px 5px rgba(0,0,0, .2);
-  
+      animation: slideUpFadeIn ease 2s;
     }
   
     .video{
@@ -114,22 +114,42 @@ h1, h2, h3, h4, h5 {
       margin: 40px 0px;
       width: 75%;
       height: 55%;
+      animation: slideUpFadeIn ease 2s;
     }
   }
 }
+
+@keyframes slideUpFadeIn {
+  0%{
+    opacity: 0;
+    transform: translateY(50%);
+    
+  }
+  100%{
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
+
+// @keyframes slideInFromLeft {
+//   0%{
+//     transform: translateX(-100%);
+//   }
+//   100%{
+//     transform: translateX(0);
+//   }
+// }
 
 .mission{
   &-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  // transition: ease 1s transform;
-
-  // .animate-mission{
-  //   transform: translateX(0);
-  // }
-
+  
   &__text{
+    opacity: 0%;
+    transform: translateX(-100%);
+    transition: ease 1.25s;
     grid-column: 1/2;
     grid-row: 1/2;
     display: grid;
@@ -138,7 +158,6 @@ h1, h2, h3, h4, h5 {
     height: 100%;
     background-color: rgba(0,0,0, .75);
     z-index: 1;
-    // transform: translateX(-100%);
 
     &-header{
       text-align: center;
@@ -150,6 +169,12 @@ h1, h2, h3, h4, h5 {
       padding: 0px 5vw;
       align-self:flex-start;
     }
+  }
+
+  .animate-mission{
+    // animation: slideInFromLeft ease 2s;
+    transform: translateX(0);
+    opacity: 100%;
   }
 
   &__img{
