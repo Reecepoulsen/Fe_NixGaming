@@ -16,7 +16,7 @@ const missionText = document.getElementById("mission-text");
 const mission_transition_point = missionText.offsetTop;
 
 const transitionMission = () => {
-  if (window.scrollY > mission_transition_point - 400 
+  if (window.scrollY > mission_transition_point - 600 
       && window.scrollY < mission_transition_point+ 600) {
     missionText.classList.add("animate-mission")
   } else {
