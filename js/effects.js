@@ -1,5 +1,6 @@
 // Navbar fade effect
-const navbar = document.getElementById("home-navbar")
+const navbar = document.getElementById("home-navbar");
+const mobileNavbar = document.getElementById("")
 const nav_transition_point = navbar.offsetTop
 
 const transitionNav = () => {
@@ -28,3 +29,10 @@ window.onscroll = () => {
   transitionNav();
   transitionMission();
 }
+
+const mobileNavList = document.getElementById("mobile-navbar__list");
+const mobileNavBtn = document.getElementById('toggleMobileNavBtn');
+
+mobileNavBtn.addEventListener("click", () => {
+  mobileNavList.classList.toggle("hidden");
+});

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
-  <title>Fe_Nix Gaming</title>
+  <title>FeNix Gaming</title>
 </head>
 <body>
   
@@ -14,13 +14,6 @@
       <!-- <div class="branding">
         <img src="./public/imgs/Fe_Nix-logo.jpeg" alt="Fe_Nix Gaming Logo">
       </div> -->
-      <div class="mobile-navbar">
-        <h1 class="mobile-navbar__header">Fe_Nix Gaming</h1>
-        <button class="mobile-navbar__btn">&#9776;</button>
-        <!-- <ul class="mobile-navbar__list">
-          <li>Btn</li>
-        </ul> -->
-      </div>
       <ul class="navbar__list">
         <li class="navbar__list-item"><a href="#mission">Mission</a></li>
         <li class="navbar__list-item"><a href="#pillars">Pillars</a></li>
@@ -28,11 +21,22 @@
         <li class="navbar__list-item"><a href="#team">Team</a></li>
         <li class="navbar__list-item"><a href="#contact">Contact</a></li>
       </ul>
-      
+    </nav>
+    <nav id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-navbar__header-container">
+        <h1 class="mobile-navbar__header">Fenix Gaming</h1>
+        <button id="toggleMobileNavBtn" class="mobile-navbar__btn">&#9776;</button>
+      </div>
+      <ul id="mobile-navbar__list" class="mobile-navbar__list hidden">
+        <li class="mobile-navbar__list-item"><a href="#mission">Mission</a></li>
+        <li class="mobile-navbar__list-item"><a href="#pillars">Pillars</a></li>
+        <li class="mobile-navbar__list-item"><a href="#events">Events</a></li>
+        <li class="mobile-navbar__list-item"><a href="#team">Team</a></li>
+        <li class="mobile-navbar__list-item"><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
   <main>
-    <!-- <section class="banner"></section> -->
     <section class="intro">
       <div class="intro-grid">
         <video class="intro-backgroundVid" autoplay muted loop src="./public/vids/octagon.mp4"></video>
@@ -62,6 +66,7 @@
         <img class="mission__img" src="./public/imgs/gamer-guy.jpeg" alt="Girl playing computer game">
       </div>
     </section>
+    <section class="banner"></section>
     <section id="pillars" class="pillars">
       <div class="pillars-grid">
         <div class="pillar">
@@ -159,6 +164,138 @@
    
     <section id="team" class="team">
       <h2 class="team__header">Our Team</h2>
+      <div class="team-card-grid">
+        <div class="team-card">
+          <div class="team-card__img" id="benImg"></div>
+          <a href="https://omlet.gg/profile/i.fenix.i" target="_blank"><div class="team-card__icon omletIcon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">BEN HOOTEN</h3>
+              <h4 class="team-card__text-title-role">Founder</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">FE_NIX</h3>
+            <p class="team-card__text-bio">
+              As founder of Fe_Nix Gaming, Ben is passionate about 
+              helping streamers make a living doing what they love. 
+              Father of two and ex-military, he shows that anyone 
+              can enjoy gaming.
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img" id="reeceImg"></div>
+          <a href=""><div class="team-card__icon linkedinIcon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">REECE POULSEN</h3>
+              <h4 class="team-card__text-title-role">Web Master</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">REPULSE</h3>
+            <p class="team-card__text-bio">
+              Builder of the FeNix Gaming site, software developer, 
+              and COD Mobile player. Reece is currently finishing his 
+              last year of college. Catch him in stream with other 
+              team members.
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img"></div>
+          <a href=""><div class="team-card__icon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">FILLER</h3>
+              <h4 class="team-card__text-title-role">Squad Member</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">GAMERTAG</h3>
+            <p class="team-card__text-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing 
+              elit. Ad rerum neque doloribus excepturi pariatur, 
+              debitis, sequi, quae recusandae sunt illum quos. 
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img"></div>
+          <a href=""><div class="team-card__icon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">FILLER</h3>
+              <h4 class="team-card__text-title-role">Squad Member</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">GAMERTAG</h3>
+            <p class="team-card__text-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing 
+              elit. Ad rerum neque doloribus excepturi pariatur, 
+              debitis, sequi, quae recusandae sunt illum quos. 
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img"></div>
+          <a href=""><div class="team-card__icon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">FILLER</h3>
+              <h4 class="team-card__text-title-role">Squad Member</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">GAMERTAG</h3>
+            <p class="team-card__text-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing 
+              elit. Ad rerum neque doloribus excepturi pariatur, 
+              debitis, sequi, quae recusandae sunt illum quos. 
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img"></div>
+          <a href=""><div class="team-card__icon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">FILLER</h3>
+              <h4 class="team-card__text-title-role">Squad Member</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">GAMERTAG</h3>
+            <p class="team-card__text-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing 
+              elit. Ad rerum neque doloribus excepturi pariatur, 
+              debitis, sequi, quae recusandae sunt illum quos. 
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img"></div>
+          <a href=""><div class="team-card__icon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">FILLER</h3>
+              <h4 class="team-card__text-title-role">Squad Member</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">GAMERTAG</h3>
+            <p class="team-card__text-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing 
+              elit. Ad rerum neque doloribus excepturi pariatur, 
+              debitis, sequi, quae recusandae sunt illum quos. 
+            </p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card__img"></div>
+          <a href=""><div class="team-card__icon"></div></a>
+          <div class="team-card__text">
+            <div class="team-card__text-title">
+              <h3 class="team-card__text-title-name">FILLER</h3>
+              <h4 class="team-card__text-title-role">Squad Member</h4>
+            </div>
+            <h3 class="team-card__text-gamerTag">GAMERTAG</h3>
+            <p class="team-card__text-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing 
+              elit. Ad rerum neque doloribus excepturi pariatur, 
+              debitis, sequi, quae recusandae sunt illum quos. 
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="contact" class="contact">
       <h2 class="contact__header">Contact</h2>

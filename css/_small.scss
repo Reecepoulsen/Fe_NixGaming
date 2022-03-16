@@ -1,36 +1,48 @@
 @media screen and (max-width: 700px) {  //iphone width is 390
   .navbar{
-    padding: 10px 20px;
-    &__list{
-      display: none;
-    }
+    display: none;
   }
+
+  .hidden{
+    display: none;
+  }
+
   .mobile-navbar{
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 50px;
     width: 100%;
+    padding: 10px 20px;
 
     &__header{
-      grid-row: 1/2;
-      grid-column: 1/2;
+      &-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      flex-grow: 1;
     }
 
     &__btn{
-      grid-row: 1/2;
-      justify-self: right;
       background: transparent;
       color: $text-color;
-      border: $text-color solid 1px;
-      border-radius: 8px;
+      border: none;
       font-size: 2rem;
-      padding: 0px 8px 5px 8px;
     }
 
     &__list{
       list-style: none;
       margin: 0;
       padding: 0;
+
+      &-item{
+        font-size: 1.5rem;
+        transition: ease .3s;
+        text-align: right;
+        a{
+          color: $text-color;
+          text-decoration: none;
+          &:visited{color: $text-color}
+        }
+      }
     }
   }
 
@@ -91,6 +103,10 @@
     }
   }
 
+  .banner{
+    display: none;
+  }
+
   .pillars{
     padding: 5vw;
       &-grid{
@@ -102,6 +118,12 @@
       &-grid{
       grid-template-columns: 1fr;
       padding: 5vw; 
+    }
+  }
+
+  .team{
+    &-card-grid{
+      grid-template-columns: 1fr;
     }
   }
 }
