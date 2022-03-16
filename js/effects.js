@@ -1,13 +1,23 @@
 // Navbar fade effect
 const navbar = document.getElementById("home-navbar");
-const mobileNavbar = document.getElementById("")
-const nav_transition_point = navbar.offsetTop
+const mobileNavbar = document.getElementById("mobile-navbar")
+const mobileNavList = document.getElementById("mobile-navbar__list");
+const mobileNavBtn = document.getElementById('toggleMobileNavBtn');
 
 const transitionNav = () => {
-  if (window.scrollY > nav_transition_point) {
-    navbar.classList.add("navbar-transition")
+  if (window.scrollY > navbar.offsetTop) {
+    navbar.classList.add("navbar-transition");
   } else {
     navbar.classList.remove("navbar-transition")
+  }
+}
+
+const transitionMobileNav = () => {
+  if (window.scrollY > mobileNavbar.offsetTop) {
+    mobileNavbar.classList.add("navbar-transition");
+  } else {
+    mobileNavbar.classList.remove("navbar-transition");
+    mobileNavList.classList.add('hidden');
   }
 }
 
@@ -27,12 +37,11 @@ const transitionMission = () => {
 
 window.onscroll = () => {
   transitionNav();
+  transitionMobileNav();
   transitionMission();
 }
 
-const mobileNavList = document.getElementById("mobile-navbar__list");
-const mobileNavBtn = document.getElementById('toggleMobileNavBtn');
-
 mobileNavBtn.addEventListener("click", () => {
   mobileNavList.classList.toggle("hidden");
+  mobileNavbar.classList.add("navbar-transition");
 });

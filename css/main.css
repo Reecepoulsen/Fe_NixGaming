@@ -581,14 +581,16 @@ h1, h2, h3, h4, h5 {
   .navbar {
     display: none;
   }
-  .hidden {
-    display: none;
-  }
   .mobile-navbar {
     display: -ms-grid;
     display: grid;
     width: 100%;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    -webkit-transition: ease .8s background;
+    transition: ease .8s background;
   }
   .mobile-navbar__header {
     -webkit-box-flex: 1;
@@ -614,7 +616,7 @@ h1, h2, h3, h4, h5 {
   .mobile-navbar__list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
   }
   .mobile-navbar__list-item {
     font-size: 1.5rem;
@@ -709,6 +711,9 @@ h1, h2, h3, h4, h5 {
   .team-card-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
