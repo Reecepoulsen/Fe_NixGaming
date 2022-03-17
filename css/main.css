@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  width: 6ch;
+  width: 315px;
   font-size: 5rem;
   text-align: right;
   -ms-grid-column-align: right;
@@ -183,6 +183,10 @@ h1, h2, h3, h4, h5 {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  background-image: url("../public/imgs/girl-gamer.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
 }
 
 .mission__text {
@@ -666,6 +670,15 @@ h1, h2, h3, h4, h5 {
         justify-self: center;
     text-align: center;
   }
+}
+
+@media screen and (max-width: 700px) and (max-width: 375px) {
+  .intro-grid h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .intro-grid .video {
     -ms-flex-item-align: baseline;
         align-self: baseline;
@@ -680,9 +693,22 @@ h1, h2, h3, h4, h5 {
     margin: 0;
   }
   .mission-grid {
+    height: 60vh;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    background-image: url("../public/imgs/girl-gamer.jpeg");
+    background-size: cover;
+    background-position: right;
   }
+}
+
+@media screen and (max-width: 700px) and (max-width: 375px) {
+  .mission-grid {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .mission__text {
     padding: 5vw;
   }
@@ -691,10 +717,18 @@ h1, h2, h3, h4, h5 {
     padding: 0;
     text-align: center;
   }
-  .mission__img {
-    grid-column: 1/-1;
-    grid-row: 1/-1;
+}
+
+@media screen and (max-width: 700px) and (max-width: 375px) {
+  .mission__text-header {
+    font-size: 2.5rem;
   }
+  .mission__text-p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .banner {
     display: none;
   }
@@ -705,6 +739,35 @@ h1, h2, h3, h4, h5 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .pillar {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) and (max-width: 375px) {
+  .pillar {
+    padding: 5px;
+  }
+  .pillar__header {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .pillar__header h3 {
+    font-size: 2.5rem;
+  }
+  .pillar__header-icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+  }
+  .pillar__text {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .events-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -714,6 +777,16 @@ h1, h2, h3, h4, h5 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+@media screen and (max-width: 700px) and (min-width: 500px) {
+  .team-card-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .hidden {
     display: none;
   }

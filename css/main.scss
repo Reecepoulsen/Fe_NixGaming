@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5 {
 
 .banner{
   height: 700px;
+  // height: 100vh;
   max-width: 100%;
   // background: url('../public/imgs/Fe_Nix-trimmed-short.jpg');
   background: url("../public/imgs/wings.png");
@@ -102,7 +103,8 @@ h1, h2, h3, h4, h5 {
     h1{
       grid-row: 1/2;
       grid-column: 1/2;
-      width: 6ch;
+      // width: 6ch;
+      width: 315px;
       font-size: 5rem;
       text-align:right;
       justify-self: right;
@@ -138,6 +140,10 @@ h1, h2, h3, h4, h5 {
   &-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-image: url("../public/imgs/girl-gamer.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
   }
   
   &__text{
