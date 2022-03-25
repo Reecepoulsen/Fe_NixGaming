@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .intro-backgroundVid {
+  display: none;
   grid-row: 1/-1;
   grid-column: 1/-1;
   z-index: -1;
@@ -128,11 +129,14 @@ h1, h2, h3, h4, h5 {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-  height: 98vh;
+  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  background-image: url("../public/imgs/fire.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 .intro-grid h1 {
@@ -206,10 +210,10 @@ h1, h2, h3, h4, h5 {
 
 .mission__text {
   opacity: 0%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
   -webkit-transition: ease 1.25s;
   transition: ease 1.25s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -661,15 +665,10 @@ h1, h2, h3, h4, h5 {
   .intro {
     overflow: hidden;
     position: relative;
-    height: 190vw;
+    height: 100vh;
   }
   .intro-backgroundVid {
-    width: 115vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -30px;
-    z-index: -1;
+    display: none;
   }
   .intro-grid {
     -ms-grid-columns: 1fr;

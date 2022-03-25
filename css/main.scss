@@ -94,18 +94,23 @@ h1, h2, h3, h4, h5 {
 
 .intro{
   &-backgroundVid{
+    display: none;
     grid-row: 1/-1;
     grid-column: 1/-1;
     z-index: -1;
     width: 100%;
   }
+
   &-grid{
     background: rgba(0,0,0, .2);
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 98vh;
+    height: 100vh;
     align-items: center;
     justify-items: center;
+    background-image: url("../public/imgs/fire.jpeg");
+    background-size: cover;
+    background-position: center;
     
   
     h1{
@@ -156,8 +161,8 @@ h1, h2, h3, h4, h5 {
   
   &__text{
     opacity: 0%;
-    transform: translateX(-100%);
     transition: ease 1.25s;
+    transform: translateX(-100%);
     grid-column: 1/2;
     grid-row: 1/2;
     display: grid;
