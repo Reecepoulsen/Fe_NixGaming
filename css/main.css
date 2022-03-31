@@ -815,7 +815,7 @@ h1, h2, h3, h4, h5 {
   .intro {
     overflow: hidden;
     position: relative;
-    height: 800px;
+    height: 1000px;
     background-image: url("../public/imgs/fire.jpeg");
     background-size: cover;
     background-position: center;
