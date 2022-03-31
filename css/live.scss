@@ -1,0 +1,21 @@
+.video-grid{
+  h1{
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90vw;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.twitch-video{
+  iframe{
+    width: 25vw;
+    height: 350px;
+  }
+}
