@@ -98,25 +98,25 @@ h1, h2, h3, h4, h5 {
 
 .intro{
   &-backgroundVid{
-    // grid-row: 1/-1;
-    // grid-column: 1/-1;
-    position: fixed;
-    top: 0;
-    left: 0;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    object-fit: cover;
     z-index: -3;
     width: 100%;
+    height: 100%;
   }
 
   &-grid{
-    background-color: rgba(0,0,0, .3);
+    background-color: rgba(0,0,0, .2);
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 900px;
+    height: 1000px;
     align-items: center;
     justify-items: center;
-    // background-image: url("../public/imgs/fire.jpeg");
-    background-size: cover;
-    background-position: center;
+    background-image: none;
     
     h1{
       grid-row: 1/-1;
@@ -164,10 +164,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .mission{
+  overflow:hidden;
   &-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-image: url("../public/imgs/girl-gamer.jpeg");
+    // background-image: url("../public/imgs/girl-gamer.jpeg");
+    background-image: url("../public/imgs/fgClan.jpeg");
     background-size: cover;
     background-position: center;
     height: 800px;
@@ -176,8 +178,8 @@ h1, h2, h3, h4, h5 {
   &__text{
     opacity: 0%;
     transition: ease 1.25s;
-    transform: translateX(-100%);
-    grid-column: 1/2;
+    transform: translateX(100%);
+    grid-column: 2/3;
     grid-row: 1/2;
     display: grid;
     justify-items: center;
@@ -189,6 +191,7 @@ h1, h2, h3, h4, h5 {
     &-header{
       text-align: center;
       font-size: 3rem;
+      text-shadow: -5px 5px rgba($orange, .3);
     }
     &-p{
       font-size: 1.75rem;
@@ -199,7 +202,6 @@ h1, h2, h3, h4, h5 {
   }
 
   .animate-mission{
-    // animation: slideInFromLeft ease 2s;
     transform: translateX(0);
     opacity: 100%;
   }
@@ -277,6 +279,7 @@ h1, h2, h3, h4, h5 {
     // grid-template-rows: 150px auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     background: rgba(0,0,0, .25);
+    background-image: none;
     // padding: 200px;
     padding: 8vw;
     grid-gap: 40px;
@@ -376,13 +379,18 @@ h1, h2, h3, h4, h5 {
   padding: 30px;
 
   &__header{
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
+    text-shadow: -5px 5px rgba($orange, .3);
+
   }
 
   &-card-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (min-width: 1500px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
     max-width: 90vw;
     margin: 0 auto;
     margin-top: 40px;
@@ -397,7 +405,7 @@ h1, h2, h3, h4, h5 {
   
     &__img{
       background-color: #939393;
-      height: 200px;
+      height: 250px;
       background-size: cover;
       background-position: center;
       border-radius: 12px;
@@ -426,7 +434,7 @@ h1, h2, h3, h4, h5 {
     }
     &__streamerTag{
       position: absolute;
-      top: 172px;
+      top: 222px;
       right: 0;
       background: rgba($orange, .8);
       width: fit-content;
@@ -543,6 +551,11 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+footer{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 .omletIcon{
   background-image: url("../public/imgs/omletIcon.png");
 }
@@ -577,6 +590,22 @@ h1, h2, h3, h4, h5 {
 
 #benImg{
   background-image: url("../public/imgs/benImg.jpg");
+}
+
+#leeImg{
+  background-image: url("../public/imgs/lee.jpeg");
+}
+
+#rachelImg{
+  background-image: url("../public/imgs/rachel.jpeg");
+}
+
+#tristinImg{
+  background-image: url("../public/imgs/tristin.jpeg");
+}
+
+#lennyImg{
+  background-image: url("../public/imgs/lenny.jpeg");
 }
 
 #reeceImg{
