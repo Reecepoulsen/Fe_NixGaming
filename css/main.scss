@@ -1,32 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans+JP&display=swap');
-@import './variables';
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans+JP&display=swap");
+@import "./variables";
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   // font-family: sans-serif;
   color: $text-color;
   background: $dark;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
-.mobile-navbar{
+.mobile-navbar {
   display: none;
 }
 
-.navbar{
+.navbar {
   // padding: 25px 30px;
   padding: 15px 30px;
   position: fixed;
@@ -35,28 +43,30 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   z-index: 5;
-  transition: ease .8s background;
+  transition: ease 0.8s background;
 
-  a{
+  a {
     color: $text-color;
     text-decoration: none;
-    &:visited{color: $text-color}
+    &:visited {
+      color: $text-color;
+    }
   }
 
-  &-transition{
-    background: rgba(0,0,0, .8);
+  &-transition {
+    background: rgba(0, 0, 0, 0.8);
   }
 
-  .branding{
+  .branding {
     margin-left: 30px;
     margin-right: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    img{
+    img {
       height: 65px;
     }
-    &__text{
+    &__text {
       font-size: 2.3rem;
       margin-left: 30px;
       width: 245px;
@@ -64,7 +74,7 @@ h1, h2, h3, h4, h5 {
     }
   }
 
-  &__list{
+  &__list {
     flex-grow: 1;
     margin: 0 auto;
     padding: 0;
@@ -72,32 +82,24 @@ h1, h2, h3, h4, h5 {
     justify-content: space-around;
     list-style: none;
 
-    &-item{
+    &-item {
       font-size: 1.5rem;
-      transition: ease .3s;
-      
-      &:hover{
+      transition: ease 0.3s;
+
+      &:hover {
         transform: translateY(-3px);
         text-decoration: underline;
-        a{color: $orange}
+        color: $orange;
+        a {
+          color: $orange;
+        }
       }
     }
   }
 }
 
-.banner{
-  height: 700px;
-  max-width: 100%;
-  background: url("../public/imgs/wingsCompressed.png");
-  background-position: center;
-  background-size: cover;
-  @media screen and (min-width: 1500px) {
-    height: 850px;
-  }
-}
-
-.intro{
-  &-backgroundVid{
+.intro {
+  &-backgroundVid {
     grid-row: 1/-1;
     grid-column: 1/-1;
     // position: absolute;
@@ -109,37 +111,37 @@ h1, h2, h3, h4, h5 {
     height: 100%;
   }
 
-  &-grid{
-    background-color: rgba(0,0,0, .2);
+  &-grid {
+    background-color: rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 1000px;
     align-items: center;
     justify-items: center;
     background-image: none;
-    
-    h1{
+
+    h1 {
       grid-row: 1/-1;
       grid-column: 1/3;
       // width: 6ch;
       width: 380px;
       font-size: 5rem;
-      text-align:center;
+      text-align: center;
       // justify-self: right;
       justify-self: center;
-      text-shadow: -5px 5px rgba(0,0,0, .2);
+      text-shadow: -5px 5px rgba(0, 0, 0, 0.2);
       animation: slideUpFadeIn ease 2s;
     }
 
-    .flock-svg{
+    .flock-svg {
       fill: $orange;
       height: 75px;
       width: 75px;
       margin-right: 30px;
-      opacity: .9;
+      opacity: 0.9;
     }
-  
-    .video{
+
+    .video {
       grid-row: 1/2;
       grid-column: 2/3;
       border-radius: 12px;
@@ -152,20 +154,19 @@ h1, h2, h3, h4, h5 {
 }
 
 @keyframes slideUpFadeIn {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(50%);
-    
   }
-  100%{
+  100% {
     opacity: 100%;
     transform: translateY(0%);
   }
 }
 
-.mission{
-  overflow:hidden;
-  &-grid{
+.mission {
+  overflow: hidden;
+  &-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     // background-image: url("../public/imgs/girl-gamer.jpeg");
@@ -174,8 +175,8 @@ h1, h2, h3, h4, h5 {
     background-position: center;
     height: 800px;
   }
-  
-  &__text{
+
+  &__text {
     opacity: 0%;
     transition: ease 1.25s;
     transform: translateX(100%);
@@ -185,86 +186,104 @@ h1, h2, h3, h4, h5 {
     justify-items: center;
     align-items: center;
     height: 100%;
-    background-color: rgba(0,0,0, .75);
+    background-color: rgba(0, 0, 0, 0.75);
     z-index: 1;
 
-    &-header{
+    &-header {
       text-align: center;
       font-size: 3rem;
-      text-shadow: -5px 5px rgba($orange, .3);
+      text-shadow: -5px 5px rgba($orange, 0.3);
     }
-    &-p{
+    &-p {
       font-size: 1.75rem;
       margin: 0;
       padding: 0px 5vw;
-      align-self:flex-start;
+      align-self: flex-start;
     }
   }
 
-  .animate-mission{
+  .animate-mission {
     transform: translateX(0);
     opacity: 100%;
   }
 
-  &__img{
+  &__img {
     grid-column: 1/3;
     grid-row: 1/2;
   }
 }
 
-.pillars{
+.pillars {
   background: $dark;
-  padding: 60px;
-  
-  &-grid{
+  padding: 60px 60px 0px 60px;
+
+  &-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 40px;
   }
 }
 
-.pillar{
+.pillar {
   background: $dark;
   padding: 20px;
   border-radius: 20px;
-  transition: ease .3s;
+  transition: ease 0.3s;
   position: relative;
-  
-  hr{
+
+  hr {
     border: dashed $orange 1px;
   }
-  
-  &__header{
+
+  &__header {
     color: $text-color;
     padding: 8px 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    &-icon{
+    &-icon {
       fill: $orange;
       height: 75px;
       width: 75px;
       margin-right: 30px;
-      opacity: .9;
+      opacity: 0.9;
     }
 
-    h3{
+    h3 {
       font-size: 3rem;
     }
   }
 
-  &__text{
+  &__text {
     font-size: 1.5rem;
     margin-left: 10px;
   }
 }
 
-.events{
+.fgn {
+  margin: 0 auto 50px auto;
+  width: 90vw;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  &__header {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: -5px 5px rgba($orange, 0.3);
+    margin: 30px 0px;
+  }
+  video {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.events {
   overflow-x: hidden;
   position: relative;
-  
-  &-background{
+
+  &-background {
     width: 100vw;
     height: 100%;
     object-fit: cover;
@@ -273,19 +292,19 @@ h1, h2, h3, h4, h5 {
     z-index: -2;
   }
 
-  &-grid{
+  &-grid {
     height: 100%;
     display: grid;
     // grid-template-rows: 150px auto auto;
     grid-template-columns: 1fr 1fr 1fr;
-    background: rgba(0,0,0, .25);
+    background: rgba(0, 0, 0, 0.25);
     background-image: none;
     // padding: 200px;
     padding: 8vw;
     grid-gap: 40px;
 
-    h2{
-      text-shadow: -5px 5px rgba($orange, .3);
+    h2 {
+      text-shadow: -5px 5px rgba($orange, 0.3);
       text-align: center;
       grid-column: 1/2;
       grid-row: 1/2;
@@ -296,21 +315,21 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.event{
-  background: rgba(0,0,0, .6);
+.event {
+  background: rgba(0, 0, 0, 0.6);
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
   padding: 30px;
   border-radius: 12px;
-  transition: ease .4s;
+  transition: ease 0.4s;
 
-  &:hover{
-    background: rgba(0,0,0, .9);
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
     transform: scale(1.03);
   }
 
-  &__title{
+  &__title {
     font-size: 2rem;
     grid-column: 1/3;
     grid-row: 1/2;
@@ -318,40 +337,40 @@ h1, h2, h3, h4, h5 {
     justify-self: center;
   }
 
-  &__subtext{
-    color: #AAAAAA;
+  &__subtext {
+    color: #aaaaaa;
   }
 
-  &__game{
+  &__game {
     grid-row: 2/3;
     grid-column: 1/3;
   }
 
-  &__date{
+  &__date {
     grid-row: 2/3;
     grid-column: 2/3;
     text-align: right;
   }
 
-  &__details{
+  &__details {
     grid-row: 3/4;
     grid-column: 1/-1;
     font-size: 1.1rem;
     margin: 5px 0px;
   }
 
-  &__reward{
+  &__reward {
     grid-row: 4/5;
     grid-column: 1/-1;
   }
 
-  &__regDates{
+  &__regDates {
     grid-row: 5/6;
     grid-column: 1/2;
     width: 10ch;
   }
 
-  &__regBtn{
+  &__regBtn {
     grid-row: 5/6;
     grid-column: 2/3;
     font-size: 1.3rem;
@@ -364,33 +383,159 @@ h1, h2, h3, h4, h5 {
     height: fit-content;
     width: fit-content;
     justify-self: right;
-    &:visited{color: $text-color}
-    &:hover{
+    &:visited {
+      color: $text-color;
+    }
+    &:hover {
       color: $text-color;
       background: $gradient;
     }
   }
 }
 
-.team{
+.team {
+  &__header {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: -5px 5px rgba($orange, 0.3);
+    margin: 30px 0px;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    width: 80vw; // Adjusted the width to be a bit larger
+    gap: 30px;
+  }
+  &-card {
+    background-color: #1c1c1c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%; // Adjusted the width to be smaller
+    border-radius: 12px;
+    overflow: hidden;
+    &__img {
+      overflow: hidden;
+      background-color: black;
+      border-radius: 12px 0 0 12px;
+      height: auto; // Adjusted height to auto
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      &__name {
+        color: $orange;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        .team-card-info__specialty {
+          color: #939393;
+          margin-left: 10px;
+          font-size: 1rem;
+        }
+      }
+      &__text {
+        padding: 10px 0px;
+      }
+      &__list {
+        color: #939393;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr; // Split into two columns to better use space
+        row-gap: 10px;
+        column-gap: 20px;
+        li {
+          &:before {
+            content: "•"; // Adds a bullet point before each player
+            color: $orange;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin {
+  &__header {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: -5px 5px rgba($orange, 0.3);
+    margin: 30px 0px;
+  }
+  &-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  &-info {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    background-color: #1c1c1c;
+    border-radius: 50px 20px 20px 50px;
+    &__img {
+      display: grid;
+      justify-content: center;
+      align-items: centers;
+      grid-row: span 2;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+    }
+    &__name {
+      font-size: 25px;
+      color: $orange;
+      align-self: end;
+    }
+    &__role {
+      align-self: start;
+    }
+  }
+}
+
+.founder {
   background: $dark;
   // height: 40vh;
   color: $text-color;
   padding: 30px;
 
-  &__header{
+  &__header {
     font-size: 2.5rem;
     text-align: center;
-    text-shadow: -5px 5px rgba($orange, .3);
-
+    text-shadow: -5px 5px rgba($orange, 0.3);
   }
 
-  &-card-grid{
+  &-card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    @media screen and (min-width: 1500px) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+
     max-width: 90vw;
     margin: 0 auto;
     margin-top: 40px;
@@ -398,12 +543,12 @@ h1, h2, h3, h4, h5 {
     gap: 30px;
   }
 
-  &-card{
+  &-card {
     // border: solid white 1px;
     position: relative;
     max-width: 350px;
-  
-    &__img{
+
+    &__img {
       background-color: #939393;
       height: 250px;
       background-size: cover;
@@ -411,8 +556,8 @@ h1, h2, h3, h4, h5 {
       border-radius: 12px;
       position: relative;
     }
-    &__icon{
-      &-container{
+    &__icon {
+      &-container {
         display: flex;
         flex-direction: column;
         // flex-wrap: wrap;
@@ -426,40 +571,40 @@ h1, h2, h3, h4, h5 {
       width: 35px;
       height: 35px;
       background-size: contain;
-      transition: ease .3s transform;
-      &:hover{
+      transition: ease 0.3s transform;
+      &:hover {
         cursor: pointer;
         transform: scale(1.15) translateY(-2px);
       }
     }
-    &__streamerTag{
+    &__streamerTag {
       position: absolute;
       top: 222px;
       right: 0;
-      background: rgba($orange, .8);
+      background: rgba($orange, 0.8);
       width: fit-content;
       padding: 2px 8px;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
-    &__text{
+    &__text {
       padding: 5px 10px;
-      &-title{
+      &-title {
         display: flex;
         flex-direction: row;
         align-items: center;
-        &-role{
+        &-role {
           margin-left: 10px;
           color: $orange;
         }
       }
-      &-gamerTag{
-        color:#939393;
+      &-gamerTag {
+        color: #939393;
         position: relative;
         margin-left: 8px;
         transform: translateY(-5px);
-        &::before{
-          content: '';
+        &::before {
+          content: "";
           position: absolute;
           height: 17px;
           width: 2px;
@@ -468,7 +613,7 @@ h1, h2, h3, h4, h5 {
           left: -7px;
         }
       }
-      &-bio{
+      &-bio {
         margin: 0;
         font-size: 1.1rem;
       }
@@ -476,49 +621,49 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-.contact{
+.contact {
   background: $dark;
   color: $text-color;
   padding: 30px;
 
-  &__header{
+  &__header {
     font-size: 2rem;
     text-align: center;
   }
 
-  &-grid{
+  &-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     justify-items: center;
     align-items: center;
   }
 
-  &__section{
+  &__section {
     text-align: center;
     padding-bottom: 20px;
   }
 
-  &__section-header{
+  &__section-header {
     margin-bottom: 15px;
     text-align: center;
   }
 
-  &__info{
+  &__info {
     width: 100%;
-    padding-right: 20px; 
-    &-email{
+    padding-right: 20px;
+    &-email {
       font-size: 1.3rem;
       color: $orange;
     }
   }
 
-  &__socials{
+  &__socials {
     border-right: solid $text-color 2px;
     border-left: solid $text-color 2px;
     width: 100%;
     padding: 0px 20px 20px 20px;
-    &-container{
+    &-container {
       display: flex;
       flex-direction: row;
       gap: 20px;
@@ -526,92 +671,92 @@ h1, h2, h3, h4, h5 {
       margin: 0 auto;
     }
 
-    &-icon{
+    &-icon {
       background-position: center;
       background-size: cover;
       height: 50px;
       width: 50px;
       border-radius: 10px;
-      transition: ease .3s transform;
-      &:hover{
+      transition: ease 0.3s transform;
+      &:hover {
         cursor: pointer;
         transform: scale(1.15) translateY(-2px);
       }
     }
   }
 
-  &__partner{
+  &__partner {
     text-align: center;
     width: 100%;
     padding-left: 20px;
-    &-email{
+    &-email {
       font-size: 1.3rem;
       color: $orange;
     }
   }
 }
 
-footer{
+footer {
   text-align: center;
   padding-bottom: 30px;
 }
 
-.omletIcon{
+.omletIcon {
   background-image: url("../public/imgs/omletIcon.png");
 }
 
-.linkedinIcon{
+.linkedinIcon {
   background-image: url("../public/imgs/linkedinIcon.jpeg");
 }
 
-.twitchIcon{
+.twitchIcon {
   background-image: url("../public/imgs/twitchIcon.png");
 }
 
-.trovoIcon{
+.trovoIcon {
   background-image: url("../public/imgs/trovoIcon.png");
 }
 
-.youtubeIcon{
+.youtubeIcon {
   background-image: url("../public/imgs/youtubeIcon.png");
 }
 
-.instaIcon{
+.instaIcon {
   background-image: url("../public/imgs/instaIcon.png");
 }
 
-.tiktokIcon{
+.tiktokIcon {
   background-image: url("../public/imgs/tiktokIcon.png");
 }
 
-.discordIcon{
+.discordIcon {
   background-image: url("../public/imgs/discordIcon.jpg");
 }
 
-#benImg{
+#benImg {
   background-image: url("../public/imgs/benImg.png");
 }
 
-#leeImg{
+#leeImg {
   background-image: url("../public/imgs/lee.jpeg");
 }
 
-#rachelImg{
+#rachelImg {
   background-image: url("../public/imgs/rachel.jpeg");
 }
 
-#tristinImg{
+#tristinImg {
   background-image: url("../public/imgs/tristin.jpeg");
 }
 
-#lennieImg{
+#lennieImg {
   background-image: url("../public/imgs/lennie.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgb(30,30,30);
+  background-color: rgb(30, 30, 30);
 }
 
-#reeceImg{
+#reeceImg {
   background-image: url("../public/imgs/reeceImg.jpeg");
 }
 

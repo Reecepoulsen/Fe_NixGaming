@@ -1,30 +1,33 @@
-@media screen and (max-width: 1250px) {  //iphone width is 390
-  .navbar{
+@media screen and (max-width: 1250px) {
+  //iphone width is 390
+  .navbar {
     display: none;
   }
-  
-  .mobile-navbar{
+
+  .mobile-navbar {
     display: block;
     width: 100%;
     padding: 10px 20px;
     position: fixed;
     top: 0;
     z-index: 5;
-    transition: ease .8s background;
+    transition: ease 0.8s background;
 
-    a{
+    a {
       color: $text-color;
       text-decoration: none;
-      &:visited{color: $text-color}
+      &:visited {
+        color: $text-color;
+      }
     }
 
-    &__header{
-      &-container{
+    &__header {
+      &-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
-        img{
+        img {
           height: 50px;
           border-radius: 50px;
           margin-right: 15px;
@@ -34,32 +37,34 @@
       flex-grow: 1;
     }
 
-    &__btn{
+    &__btn {
       background: transparent;
       color: $text-color;
       border: none;
       font-size: 2rem;
     }
 
-    &__list{
+    &__list {
       list-style: none;
       margin: 0;
-      padding: 10px ;
+      padding: 10px;
 
-      &-item{
+      &-item {
         font-size: 1.5rem;
-        transition: ease .3s;
+        transition: ease 0.3s;
         text-align: right;
-        a{
+        a {
           color: $text-color;
           text-decoration: none;
-          &:visited{color: $text-color}
+          &:visited {
+            color: $text-color;
+          }
         }
       }
     }
   }
-  
-  .intro{
+
+  .intro {
     overflow: hidden;
     position: relative;
     // height: 175vw;
@@ -68,16 +73,16 @@
     background-image: url("../public/imgs/lava.png");
     background-size: cover;
     background-position: center;
-    &-backgroundVid{
+    &-backgroundVid {
       display: none;
     }
-    &-grid{
+    &-grid {
       grid-template-columns: 1fr;
       padding: 5vw;
       // background-image: url("../public/imgs/fire.jpeg");
       // background-size: cover;
       // background-position: center;
-      h1{
+      h1 {
         margin-top: -400px;
         grid-row: 1/2;
         grid-column: 1/2;
@@ -92,8 +97,8 @@
         }
       }
 
-      .video{
-        align-self:baseline;
+      .video {
+        align-self: baseline;
         grid-row: 2/3;
         grid-column: 1/2;
         height: 60vw;
@@ -103,78 +108,136 @@
     }
   }
 
-  .mission{
-    &-grid{
+  .mission {
+    &-grid {
       height: 500px;
       grid-template-columns: 1fr;
       background-size: cover;
       background-position: right;
     }
-    &__text{
+    &__text {
       padding: 5vw;
-      
-      &-p{
+
+      &-p {
         font-size: 1.5rem;
         padding: 0;
         text-align: center;
       }
       @media screen and (max-width: 375px) {
-        &-header{
+        &-header {
           font-size: 2.5rem;
         }
-  
-        &-p{
+
+        &-p {
           font-size: 1.2rem;
         }
       }
     }
   }
 
-  .banner{
+  .banner {
     display: none;
   }
 
-  .pillars{
+  .pillars {
     padding: 5vw;
-      &-grid{
+    &-grid {
       grid-template-columns: 1fr;
     }
   }
 
-  .pillar{
+  .pillar {
     padding: 20px;
     @media screen and (max-width: 375px) {
       padding: 5px;
-      &__header{
+      &__header {
         width: fit-content;
         margin: 0 auto;
-        h3{
+        h3 {
           font-size: 2.5rem;
         }
-        &-icon{
+        &-icon {
           height: 50px;
           width: 50px;
           margin-right: 15px;
         }
       }
-      &__text{
+      &__text {
         font-size: 1.2rem;
       }
     }
   }
 
-  .events{
-      &-grid{
+  .events {
+    &-grid {
       grid-template-columns: 1fr;
-      padding: 5vw; 
+      padding: 5vw;
       // background-image: url("../public/imgs/abstract.png");
       // background-position: center;
       // background-size: cover;
     }
   }
+  
+  .team {
+    &-grid {
+      width: 90vw; // Adjust width for mobile screens
+    }
+    &-card {
+      display: block; // Stack the image and info vertically
+      width: 100%; // Use full width for mobile
+      &__img {
+        border-radius: 12px 12px 0 0; // Round the top corners
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      &-info {
+        padding: 20px;
+        text-align: center; // Center text for mobile
+        &__flex {
+          display: block; // Stack name and specialty vertically
+          margin-bottom: 10px;
+        }
+        &__name {
+          color: $orange;
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+        &__specialty {
+          font-size: 1rem;
+          color: #939393;
+        }
+        &__text {
+          padding: 10px 0px;
+        }
+        &__list {
+          display: grid;
+          grid-template-columns: 1fr; // Single column for mobile
+          row-gap: 5px;
+          text-align: center; // Center text for mobile
+          li {
+            &:before {
+              content: "•";
+              color: $orange;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
 
-  .team{
-    &-card-grid{
+  .admin {
+    &-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .founder {
+    &-card-grid {
       grid-template-columns: 1fr;
       @media screen and (min-width: 650px) {
         grid-template-columns: 1fr 1fr;
@@ -182,68 +245,75 @@
     }
   }
 
-  .contact{
+  .contact {
     padding: 0;
     padding-bottom: 20px;
-    &-grid{
+    &-grid {
       grid-template-columns: 1fr;
       row-gap: 20px;
     }
 
-    &__section{
+    &__section {
       border: none;
       padding: 0;
     }
 
-    &__socials{
+    &__socials {
       grid-row: 3/4;
       padding-bottom: 20px;
     }
 
-    @media screen  and (min-width: 500px){
-      &-grid{
+    @media screen and (min-width: 500px) {
+      &-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      &__socials{
+      &__socials {
         grid-column: 1/-1;
       }
     }
   }
 
-  .hidden{
+  .hidden {
     display: none;
   }
 
-  // styling for sizes between 800-1250 
-  @media screen and (min-width: 800px){
-
+  // styling for sizes between 800-1250
+  @media screen and (min-width: 800px) {
     .intro {
-
-      &-grid{
-        // grid-template-rows: 350px 1fr;
-      }
-      .video{
+      .video {
         width: 80%;
         height: 100%;
       }
     }
 
-    .pillars{
-      &-grid{
+    .pillars {
+      &-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    .pillar{
+    .pillar {
       padding: 0px;
-      &:nth-of-type(3){
+      &:nth-of-type(3) {
         grid-column: 1/-1;
       }
     }
 
-    .events{
-      &-grid{
+    .events {
+      &-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .team {
+      &-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .admin {
+      &-info-grid {
         grid-template-columns: 1fr 1fr;
       }
     }

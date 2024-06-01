@@ -1,18 +1,13 @@
 .video-grid {
   padding-top: 150px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 60px;
   width: 90vw;
   margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   justify-items: center;
 }
-
 .video-grid h1 {
   grid-column: 1/-1;
   text-align: center;
@@ -22,5 +17,4 @@
 .twitch-video iframe {
   width: 25vw;
   height: 330px;
-}
-/*# sourceMappingURL=live.css.map */
+}/*# sourceMappingURL=live.css.map */
